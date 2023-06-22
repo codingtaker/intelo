@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": 3,
+      "codeArticle": "kits",
+      "designation": "Equipement de protection",
+      "prixUnitaireHt": "10000 fr",
+      "tauxTva": false,
+      "prixUnitaireTtc": "24000 Fr",
+      "statut": true
+    },
+    {
+      "id": 4,
+      "codeArticle": "CS",
+      "designation": "Casque",
+      "prixUnitaireHt": "20000 fr",
+      "tauxTva": true,
+      "prixUnitaireTtc": "56000 Fr",
+      "statut": true
+    },
+    {
+      "id": 5,
+      "codeArticle": "PC",
+      "designation": "Ordinateur",
+      "prixUnitaireHt": "450000 fr",
+      "tauxTva": false,
+      "prixUnitaireTtc": "500000 Fr"
+    },
+    {
+      "codeArticle": "10",
+      "designation": "Voiture",
+      "prixUnitaireHt": "150000000",
+      "tauxTva": true,
+      "prixUnitaireTtc": "550000000",
+      "id": 6
+    },
+    {
+      "codeArticle": "CMDF",
+      "designation": "Ccommande Fournisseur",
+      "prixUnitaireHt": "40000000",
+      "tauxTva": true,
+      "prixUnitaireTtc": "55000000",
+      "id": 7
+    },
+    {
+      "codeArticle": "ODL",
+      "designation": "Onduleur",
+      "prixUnitaireHt": "500000",
+      "tauxTva": true,
+      "prixUnitaireTtc": "800000",
+      "id": 8
+    },
+    {
+      "codeArticle": "mkn,ev",
+      "designation": "ljnk,",
+      "prixUnitaireHt": "998",
+      "tauxTva": false,
+      "prixUnitaireTtc": "990",
+      "id": 9
+    }
+  ]
+}

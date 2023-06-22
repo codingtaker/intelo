@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-sm-4">
+      <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+        <div class="card-header">Signature « simple »</div>
+        <div class="card-body">
+          <h5 class="card-title">Simplcité</h5>
+          <p class="card-text">La signature électronique « simple» correspond au niveau le plus couramment utilisé pour sa accessibilité, simplicité.</p>
+          <input type="file" accept=".pdf" id="file-input" style="display: none">
+          <button style='font-size:24px'  type="button" onclick="document.getElementById('file-input').click()" style="text-align: center;">PDF <i class='fas fa-file-pdf'></i></button>        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+        <div class="card-header">Signature « avancée »</div>
+        <div class="card-body">
+          <h5 class="card-title">Spécifiques</h5>
+          <p class="card-text">La signature électronique avancée correspond au deuxième niveau prévu par le règlement imposé par l'eIDAS.</p>
+          <input type="file" accept=".pdf" id="file-input" style="display: none">
+          <button style='font-size:24px'  type="button" onclick="document.getElementById('file-input').click()" style="text-align: center;">PDF <i class='fas fa-file-pdf'></i></button>        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+        <div class="card-header">Signature « certificat »</div>
+        <div class="card-body">
+          <h5 class="card-title">Simplcité</h5>
+          <p class="card-text">Le certificat de signature électronique devant être qualifié, il permet de s’assurer de façon fiable de l’identité du signataire.</p>
+          
+          <form>
+            <input type="file" (change)="onFileSelected($event)">
+            <button (click)="onUpload()">Upload</button>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  

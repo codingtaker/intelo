@@ -1,0 +1,55 @@
+<div class="container">
+    <ng-template #error>
+        <div class="text-danger">{{errorMessage}}</div>
+    </ng-template>
+    <div class="card">
+        <div class="card-header"> Liste des Ulilisateurs</div>
+        <div class="card-body"> 
+            <form [formGroup]="searchFormGroup" (ngSubmit)="handleSearchUsers()">
+                <div class="input-group">
+                    <label class="input-group-text">Recherche</label>
+                    <input class="form-control" type="text" formControlName="Recherche">
+                    <button class="btn btn-info">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th> <th>Nom</th> <th>Email</th> <th>Mot de passe</th> <th>Admin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let u of user">
+                        <td>{{u.id}}</td>
+                        <td>{{u.name}}</td>
+                        <td>{{u.email}}</td>
+                        <td>{{u.mpd}}</td>
+                        <td>
+                            <i *ngIf="u.admin==true" class="bi bi-star-fill text-warning"></i>
+                        </td>
+                        <td>
+                            <button (click)="setAdmin(u)" class="btn" [ngClass]="u.admin==true?'btn-primary': 'btn-success'">
+                                <span *ngIf="u.admin==true"> vrai</span>
+                                <span *ngIf="u.admin==false">faux</span>
+                            </button>
+                        </td>
+                     
+                        <td>
+                            <button class="btn btn-danger" (click)="deleteUser(u)"> 
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="nav nav-pills">
+                <li *ngFor="let item of [].constructor(this.totalPages); let i =index">
+                    <a (click)="goToPage(i)" [ngClass]="i==currentPage?'btn-info':'btn-outline-info'" class="btn ms-1 mt-1">{{i}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
